@@ -1,0 +1,52 @@
+---
+import MainNavigation from "../components/MainNavigation.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da-DK">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>LOUISIANA-FONDEN</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={Astro.resolve("../styles/global.css")}
+    />
+  </head>
+  <body>
+    <div class="sm:mt-0 sm:mx-auto grid sm:gap-y-6 layout">
+      <h3
+        class="col-span-full sm:col-span-1 sm:col-start-2 py-6 sm:py-0 sm:mt-6 text-title relative bg-bg"
+      >
+        LOUISIANA-FONDEN
+      </h3>
+
+      <MainNavigation client:load />
+
+      <main
+        class="col-span-full sm:col-span-1 sm:col-start-2 sm:row-start-2 space-y-6 mb-20"
+      >
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>
+
+<style>
+  .layout {
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .layout {
+      padding-inline: 1.5rem;
+      grid-template-columns: 180px 1fr;
+      max-width: 100vw;
+    }
+  }
+  @media (min-width: 1200px) {
+    .layout {
+      max-width: 1200px;
+    }
+  }
+</style>

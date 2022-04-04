@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/vedtaegter.jpg";
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Louisiana-Fonden kan, ifølge vedtægterne, også yde driftstilskud til Louisiana og dermed til de mange aktiviteter, der finder sted året rundt på museet. Her den populære festival Louisiana Literature, der afholdes hvert år i august. Foto: Klaus Holsting."
+  />
+
+  <h1>Vedtægter</h1>
+
+  <p>
+    Vedtægterne for Louisiana-Fonden blev konfirmeret 28. september 1973 og
+    senest ændret 10. december 2003.
+  </p>
+  <div class="statutes">
+    <div class="pdf-file"></div>
+
+    <a href="/pdf/Vedtægter_Louisiana_Fonden.pdf">
+      Vedtægter for Louisiana-Fonden
+    </a>
+  </div>
+</Layout>

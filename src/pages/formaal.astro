@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/formaal.jpg";
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Midler fra Louisiana-Fonden gør det til stadighed muligt at udvide museets samling. Det har således i 2021 været muligt med generøs hjælp fra fonden – og fra Ny Carlsbergfondet – at erhverve et af Louise Bourgeois’ sene hoveværker, ’Objekt’ fra 2005. Foto: Poul Buchard."
+  />
+
+  <h1>Formål</h1>
+
+  <p>
+    Fondens formål er at yde økonomisk støtte til den selvejende institution
+    <a href="https://louisiana.dk">Louisiana Museum of Modern Art</a>. Ifølge
+    vedtægterne kan støtten udmøntes således:
+  </p>
+
+  <ul class="list-disc pl-5">
+    <li>
+      De midler, der skænkes museet, skal fortrinsvis anvendes til indkøb af
+      kunstværker.
+    </li>
+    <li>
+      I det omfang museets indtægter og øvrige tilskud til dets drift ikke
+      dækker museets udgifter, kan fonden yde driftstilskud.
+    </li>
+    <li>
+      Herudover kan fonden yde støtte til museet til nyopførelse af bygninger,
+      erhvervelse af fast ejendom eller mere omfattende reparationer af sådan.
+      Støtte hertil kan eventuelt ydes i form af lån.
+    </li>
+    <li>
+      Fondens vedtægter tilsiger, at det udelukkende er <a
+        href="https://louisiana.dk">Louisiana Museum of Modern Art</a
+      >, der kan ansøge Louisiana-Fonden om støtte.
+    </li>
+  </ul>
+</Layout>

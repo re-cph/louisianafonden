@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/bestyrelse.jpg";
+
+const BOARD = [
+  {
+    name: "Lars Henrik Munch",
+    title: "bestyrelses&shy;formand",
+    post: "formand",
+  },
+
+  {
+    name: "Dorte Mandrup-Poulsen",
+    title: "arkitekt MAA",
+    post: "næst&shy;formand",
+  },
+
+  {
+    name: "Michael Pram Rasmussen",
+    title: "bestyrelses&shy;formand",
+  },
+
+  {
+    name: "Minik Thorleif Rosing",
+    title: "professor",
+  },
+
+  {
+    name: "Inge Berneke",
+    title: "SVP, Corporate Affairs",
+  },
+  {
+    name: "Anders Byriel",
+    title: "adm. direktør",
+  },
+];
+
+const MANAGEMENT = [
+  { name: "Poul Erik Tøjner", title: "Museums&shy;direktør" },
+];
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Ligesom Louisiana-Fonden kan yde støtte til nyopførelse af bygninger og erhvervelse af fast ejendom, er der også mulighed for at støtte mere omfattende reparationer af den eksisterende bygningsmasse. Her den Gamle Villa, der danner ramme om museets indgang. Foto: Kim Hansen."
+  />
+
+  <h1>Bestyrelse</h1>
+
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {BOARD.map((member) => (
+      <li>
+        <div class="font-bold">{member.name}</div>
+        <div set:html={member.title} />
+        {member.post && <div set:html={`(${member.post})`} />}
+      </li>
+    ))}
+  </ul>
+
+  <h2 class="pt-6">Direktion</h2>
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    {MANAGEMENT.map((member) => (
+      <li>
+        <div class="font-bold">{member.name}</div>
+        <div set:html={member.title} />
+      </li>
+    ))}
+  </ul>
+</Layout>

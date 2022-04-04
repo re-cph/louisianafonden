@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/aarsrapport.jpg";
+
+const REPORTS = [
+  {
+    name: "Årsrapport 2020",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2020.pdf",
+  },
+  {
+    name: "Årsrapport 2019",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2019.pdf",
+  },
+  {
+    name: "Årsrapport 2018",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2018.pdf",
+  },
+  {
+    name: "Årsrapport 2017",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2017.pdf",
+  },
+  {
+    name: "Årsrapport 2016",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2016.pdf",
+  },
+  {
+    name: "Årsrapport 2015",
+    pdf: "/pdf/Louisiana_fonden_aarsrapport_2015.pdf",
+  },
+];
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Driftstilskud fra Louisiana-Fonden er til gavn og glæde for gæster i alle aldre. Louisiana Børnehus tilbyder alle åbningsdage året rundt gratis værksteder og aktiviteter for børn og unge, der tager udgangspunkt i museets udstillinger og samling. Foto: Ulrik Jantzen."
+  />
+
+  <h1>Årsrapporter</h1>
+
+  <p>Her finder du Louisiana-Fondens årsrapporter fra:</p>
+
+  <ul class="space-y-6">
+    {REPORTS.map(({ name, pdf }) => (
+      <li>
+        <a href={pdf}>{name}</a>
+      </li>
+    ))}
+  </ul>
+</Layout>

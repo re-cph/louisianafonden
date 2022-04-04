@@ -1,0 +1,69 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "../components/Image.astro";
+import img from "../images/governance.jpg";
+
+const REPORTS = [
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2021",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2021.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2020",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2020.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2019",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2019.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2018",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2018.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2017",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2017.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2016",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2016.pdf",
+  },
+  {
+    name: "Lovpligtig redegørelse for god fondsledelse 2015",
+    pdf: "/pdf/skema_god_fondsledelse_LF_2015.pdf",
+  },
+];
+---
+
+<Layout>
+  <Image
+    src={img}
+    caption="Louisiana-Fonden har udelukkende til formål er at yde økonomisk støtte til den selvejende institution Louisiana Museum of Modern Art. Foto fra Skulpturparken med Henry Moores ’Two Piece Reclining Figure No. 5’ og udsigt over Øresund. Foto: Kim Hansen."
+  />
+
+  <h1>Governance</h1>
+
+  <p>
+    Fonden er omfattet af erhvervsfondslovens og årsregnskabslovens bestemmelser
+    om god fondsledelse. Fonden skal derfor redegøre for, hvordan den lever op
+    til anbefalingerne fra Komitéen for God Fondsledelse.
+  </p>
+
+  <p>
+    <a
+      href="https://godfondsledelse.dk/redegorelse"
+      target="_blank"
+      rel="noreferrer">Se redegørelsen</a
+    >
+  </p>
+
+  <p>Her finder du:</p>
+
+  <ul class="space-y-6">
+    {REPORTS.map(({ name, pdf }) => (
+      <li>
+        <a href={pdf}>{name}</a>
+      </li>
+    ))}
+  </ul>
+</Layout>
